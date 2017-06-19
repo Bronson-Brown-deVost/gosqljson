@@ -82,6 +82,7 @@ func QueryDbToArray(db *sql.DB, theCase string, sqlStatement string, sqlParams .
 		}
 		data = append(data, result)
 	}
+	rows.Close()
 	return headers, data, nil
 }
 
@@ -142,6 +143,7 @@ func QueryTxToArray(tx *sql.Tx, theCase string, sqlStatement string, sqlParams .
 		}
 		data = append(data, result)
 	}
+	rows.Close()
 	return headers, data, nil
 }
 
@@ -212,6 +214,7 @@ func QueryDbToMap(db *sql.DB, theCase string, sqlStatement string, sqlParams ...
 		}
 		results = append(results, result)
 	}
+	rows.Close()
 	return results, nil
 }
 
@@ -282,6 +285,7 @@ func QueryTxToMap(tx *sql.Tx, theCase string, sqlStatement string, sqlParams ...
 		}
 		results = append(results, result)
 	}
+	rows.Close()
 	return results, nil
 }
 
