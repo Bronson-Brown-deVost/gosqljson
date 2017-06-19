@@ -1,10 +1,10 @@
 gosqljson
 =========
 
-A Go SQL to JSON library.
+A Go SQL to JSON library based on elgs code.  This fork closes connections after each query, since I was running into a problem exceeding max connections when making many db queries in a short period of time.
 
 #Installation
-`go get -u github.com/elgs/gosqljson`
+`go get -u github.com/Bronson-Brown-deVost/gosqljson`
 
 # Sample code
 Data in the table:
